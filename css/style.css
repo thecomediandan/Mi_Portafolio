@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('./../content/fonts/Gilroy-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('./../content/fonts/Gilroy-Light.otf') format('opentype');
+}
+
+:root {
+    --color-light-primary1: rgb(236, 236, 236);
+    --color-light-primary2: rgb(112, 76, 198);
+
+    --color-light-secundary1: rgb(113, 55, 248);
+    --color-light-secundary2: rgb(77, 29, 174);
+
+    --color-dark-primary1: rgb(113, 55, 248);
+    --color-dark-primary2: rgb(232, 232, 232);
+
+    --color-dark-secundary1: rgb(28, 27, 32);
+    --color-dark-secundary2: hwb(252 16% 82%);
+
+    --font-title: Gilroy-ExtraBold;
+    --font-subtitle: Gilroy-ExtraBold;
+    --font-paragraph: Gilroy-Light;
+}
+
+body {
+    font-family: var(--font-paragraph);
+    font-weight: 700;
+    color: var(--color-light-primary1);
+    background-color: var(--color-light-secundary1);
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-light-secundary1);
+}
+.nav-logo {
+    grid-column: 1 / 2;
+}
+.nav-logo img{
+    width: 10rem;
+}
+.nav-options {
+    grid-column: 2 / 3;
+    width: 100%;
+}
+.nav-options ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    width: 30rem;
+}
+.nav-options ul li {
+    margin: 0.7rem;
+}
+.nav-setux {
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.nav-setux img {
+    width: 2.5rem;
+}
+.nav-setux div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.nav-setux--theme {
+    width: 65%;
+}
+.nav-setux--language {
+    width: 35%;
+}
+
+.background {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.div-background--left {
+    grid-column: 1 / 2;
+    width: 100%;
+    background-color: var(--color-light-secundary1);
+}
+.div-background {
+    grid-column: 2 / 3;
+}
+.div-background--right {
+    grid-column: 3 / 4;
+    width: 100%;
+    background-color: var(--color-light-primary2);
+}
+#main-banner {
+    display: block;
+    position: relative;
+}
+.paragraph {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: var(--font-title);
+    font-size: 4.5rem;
+}
+.div-paragraph--down {
+    margin: 2rem 0;
+}
+.div-paragraph--dott {
+    color: var(--color-light-primary2);
+}
