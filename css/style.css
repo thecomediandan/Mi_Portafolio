@@ -34,7 +34,10 @@ body {
 }
 
 nav {
+    /*position: fixed;*/
+    /*z-index: 4;*/
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
     justify-items: center;
     align-items: center;
@@ -57,15 +60,18 @@ nav {
     flex-direction: row;
     justify-items: center;
     justify-content: space-around;
-    width: 70%;
+    width: 75%;
 }
 .nav-options ul li button{
     margin: 0.7rem;
     padding: 0.7rem;
 }
-.nav-options ul li .nav-options--button-1 {
+.nav-options ul li button:hover{
+    color: var(--color-light-secundary2);
+}
+.nav-options--button-clicked {
     border: 1px solid var(--color-light-primary1);
-    border-radius: 25%;
+    border-radius: 10%;
 }
 .nav-setux {
     grid-column: 3 / 4;
@@ -85,6 +91,26 @@ nav {
 .nav-setux button span{
     width: 1rem;
     margin: 0 0.25rem;
+}
+.div-setux--item-menu {
+    position: relative;
+}
+.setux-option--menu {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    z-index: 5;
+    /*margin-top: 0.5rem;*/
+    padding: 0.5rem;
+    background-color: var(--color-light-secundary1);
+    border: 1px solid var(--color-light-primary1);
+    border-radius: 10%;
+}
+.setux-option--menu li:hover{
+    color: var(--color-light-secundary2);
+}
+.setux-option--menu-selected {
+    color: var(--color-light-secundary2);
 }
 
 .background {
