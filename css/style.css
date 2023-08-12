@@ -31,6 +31,7 @@ body {
     font-weight: 700;
     color: var(--color-light-primary1);
     background-color: var(--color-light-secundary1);
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -109,7 +110,7 @@ nav {
 .setux-option--menu li:hover{
     color: var(--color-light-secundary2);
 }
-.setux-option--menu-selected {
+.setux-option--menu-theme-selected, .setux-option--menu-language-selected {
     color: var(--color-light-secundary2);
 }
 

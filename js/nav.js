@@ -8,7 +8,14 @@ const buttonLanguage = document.querySelector(".div-setux--buttom-language");
 const areaMenuTheme = document.querySelector(".menu-theme");
 const areaMenuLanguage = document.querySelector(".menu-language");
 const menus = document.querySelectorAll(".setux-option--menu");
+const buttonAuto = document.querySelector(".setux-option--menu-auto");
+const buttonNormal = document.querySelector(".setux-option--menu-normal");
+const buttonDark = document.querySelector(".setux-option--menu-dark");
+const buttonEnglish = document.querySelector(".setux-option--menu-english");
+const buttonSpanish = document.querySelector(".setux-option--menu-spanish");
 
+
+// Click event of options buttons
 option1.addEventListener("click", (e) => {
     if (!option1.classList.contains("nav-options--button-clicked")) {
         cleanClickedOptions("nav-options--button-clicked");
@@ -34,6 +41,25 @@ option4.addEventListener("click", (e) => {
     }
 });
 
+// Buttons setux hover arrow-down
+buttonTheme.addEventListener("mouseover", (e) => {
+    document.querySelector(".div-setux--buttom-theme span")
+    .setAttribute("style", "color: var(--color-light-secundary2)");
+});
+buttonTheme.addEventListener("mouseout", (e) => {
+    document.querySelector(".div-setux--buttom-theme span")
+    .setAttribute("style", "color: var(--color-light-primary1)");
+});
+buttonLanguage.addEventListener("mouseover", (e) => {
+    document.querySelector(".div-setux--buttom-language span")
+    .setAttribute("style", "color: var(--color-light-secundary2)");
+});
+buttonLanguage.addEventListener("mouseout", (e) => {
+    document.querySelector(".div-setux--buttom-language span")
+    .setAttribute("style", "color: var(--color-light-primary1)");
+});
+
+// Menu and buttons setux hover
 buttonTheme.addEventListener("click", (e) => {
     let menu = document.querySelector(".menu-theme .setux-option--menu");
     menu.setAttribute("style", "display: block;");
@@ -56,19 +82,40 @@ menus.forEach((menu) => {
     });
 });
 
-function hoverArrow() {
-    let buttons = document.querySelectorAll(".nav-setux button");
-    buttons.forEach(buttonElement => {
-        buttonElement.addEventListener("mouseover", (e) => {
-            buttonElement.getElementsByTagName("span")[0].setAttribute("style", "color: var(--color-light-secundary2)");
-        });
-        buttonElement.addEventListener("mouseout", (e) => {
-            buttonElement.getElementsByTagName("span")[0].setAttribute("style", "color: var(--color-light-primary1)");
-        });
-    });
-}
+// Click event of setux buttons
+buttonAuto.addEventListener("click", (e) => {
+    if (!buttonAuto.classList.contains("setux-option--menu-theme-selected")) {
+        cleanClickedOptions("setux-option--menu-theme-selected");
+        buttonAuto.classList.add("setux-option--menu-theme-selected");
+    }
+});
+buttonNormal.addEventListener("click", (e) => {
+    if (!buttonNormal.classList.contains("setux-option--menu-theme-selected")) {
+        cleanClickedOptions("setux-option--menu-theme-selected");
+        buttonNormal.classList.add("setux-option--menu-theme-selected");
+    }
+});
+buttonDark.addEventListener("click", (e) => {
+    if (!buttonDark.classList.contains("setux-option--menu-theme-selected")) {
+        cleanClickedOptions("setux-option--menu-theme-selected");
+        buttonDark.classList.add("setux-option--menu-theme-selected");
+    }
+});
 
-hoverArrow();
+buttonEnglish.addEventListener("click", (e) => {
+    if (!buttonEnglish.classList.contains("setux-option--menu-language-selected")) {
+        cleanClickedOptions("setux-option--menu-language-selected");
+        buttonEnglish.classList.add("setux-option--menu-language-selected");
+    }
+});
+buttonSpanish.addEventListener("click", (e) => {
+    if (!buttonSpanish.classList.contains("setux-option--menu-language-selected")) {
+        cleanClickedOptions("setux-option--menu-language-selected");
+        buttonSpanish.classList.add("setux-option--menu-language-selected");
+    }
+});
+
+
 function cleanClickedOptions(selected) {
     let button = document.querySelector("." + selected);
     button.classList.remove(selected);
