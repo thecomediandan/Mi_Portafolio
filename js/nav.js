@@ -44,29 +44,29 @@ option4.addEventListener("click", (e) => {
 // Buttons setux hover arrow-down
 buttonTheme.addEventListener("mouseover", (e) => {
     document.querySelector(".div-setux--buttom-theme span")
-    .setAttribute("style", "color: var(--color-light-secundary2)");
+    .setAttribute("style", "color: var(--color-secundary2)");
 });
 buttonTheme.addEventListener("mouseout", (e) => {
     document.querySelector(".div-setux--buttom-theme span")
-    .setAttribute("style", "color: var(--color-light-primary1)");
+    .setAttribute("style", "color: var(--color-primary1)");
 });
 buttonLanguage.addEventListener("mouseover", (e) => {
     document.querySelector(".div-setux--buttom-language span")
-    .setAttribute("style", "color: var(--color-light-secundary2)");
+    .setAttribute("style", "color: var(--color-secundary2)");
 });
 buttonLanguage.addEventListener("mouseout", (e) => {
     document.querySelector(".div-setux--buttom-language span")
-    .setAttribute("style", "color: var(--color-light-primary1)");
+    .setAttribute("style", "color: var(--color-primary1)");
 });
 
 // Menu and buttons setux hover
 buttonTheme.addEventListener("click", (e) => {
     let menu = document.querySelector(".menu-theme .setux-option--menu");
-    menu.setAttribute("style", "display: block;");
+    menu.setAttribute("style", "display: flex;");
 });
 buttonLanguage.addEventListener("click", (e) => {
     let menu = document.querySelector(".menu-language .setux-option--menu");
-    menu.setAttribute("style", "display: block;");
+    menu.setAttribute("style", "display: flex;");
 });
 areaMenuTheme.addEventListener("mouseleave", (e) => {
     let menu = document.querySelector(".menu-theme .setux-option--menu");
@@ -83,22 +83,23 @@ menus.forEach((menu) => {
 });
 
 // Click event of setux buttons
-buttonAuto.addEventListener("click", (e) => {
-    if (!buttonAuto.classList.contains("setux-option--menu-theme-selected")) {
-        cleanClickedOptions("setux-option--menu-theme-selected");
-        buttonAuto.classList.add("setux-option--menu-theme-selected");
-    }
-});
 buttonNormal.addEventListener("click", (e) => {
     if (!buttonNormal.classList.contains("setux-option--menu-theme-selected")) {
         cleanClickedOptions("setux-option--menu-theme-selected");
         buttonNormal.classList.add("setux-option--menu-theme-selected");
+
+        funLightMode();
     }
 });
 buttonDark.addEventListener("click", (e) => {
     if (!buttonDark.classList.contains("setux-option--menu-theme-selected")) {
         cleanClickedOptions("setux-option--menu-theme-selected");
         buttonDark.classList.add("setux-option--menu-theme-selected");
+
+        funDarkMode();
+
+        // if (root.style.getPropertyValue('--color-light-primary1') === 'blue') to original value
+        // if (getComputedStyle(root).getPropertyValue('--color-primary').trim() === 'blue') to exact value
     }
 });
 
@@ -120,3 +121,91 @@ function cleanClickedOptions(selected) {
     let button = document.querySelector("." + selected);
     button.classList.remove(selected);
 }
+
+// * RESPONSIVE NAV CONFIGURATION
+
+const buttonOptionResponsive = document.querySelector(".nav--bar-button-option");
+buttonOptionResponsive.addEventListener("click", (e) => {
+    let frameOption = document.querySelector(".nav-bar-option--frame");
+    frameOption.setAttribute("style", "display: flex;");
+    document.querySelector("body").setAttribute("style", "overflow-y: hidden;")
+
+    const buttonCloseOptionResponsive = document.querySelector(".nav--bar-button-close");
+    buttonCloseOptionResponsive.addEventListener("click", (e) => {
+        frameOption.setAttribute("style", "display: none;");
+        document.querySelector("body").setAttribute("style", "overflow-y: auto;")
+        buttonCloseOptionResponsive.removeEventListener("click", e)
+    });
+
+    frameOption.addEventListener("mouseout", (e) => {
+        frameOption.setAttribute("style", "display: none;");
+        document.querySelector("body").setAttribute("style", "overflow-y: auto;")
+        buttonCloseOptionResponsive.removeEventListener("click", e)
+    });
+});
+
+// ? AUTOMATIC THEME CONFIGURATION
+function funDarkMode() {
+    const root = document.documentElement;
+    const logo = document.querySelector(".nav-logo > img");
+    const banner = document.querySelector(".div-background");
+    const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
+    const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
+    const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
+
+    iconThemeDarkResponsive.setAttribute("style", "display: block;");
+    iconThemeLightResponsive.setAttribute("style", "display: none;");
+    logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Dark.png");
+
+    root.style.setProperty('--color-primary1', 'var(--color-dark-primary1)');
+    root.style.setProperty('--color-primary2', 'var(--color-dark-primary2)');
+    root.style.setProperty('--color-secundary1', 'var(--color-dark-secundary1)');
+    root.style.setProperty('--color-secundary2', 'var(--color-dark-secundary2)');
+    root.style.setProperty('--color-accent', 'var(--accent-dark)');
+    logo.setAttribute("src", "./img/logo/Logotipo-dark.png");
+    banner.setAttribute("src", "./img/logo/Fondo-Dark.png");
+}
+function funLightMode() {
+    const root = document.documentElement;
+    const logo = document.querySelector(".nav-logo > img");
+    const banner = document.querySelector(".div-background");
+    const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
+    const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
+    const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
+
+    iconThemeDarkResponsive.setAttribute("style", "display: none;");
+    iconThemeLightResponsive.setAttribute("style", "display: block;");
+    logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Light.png");
+    root.style.setProperty('--color-primary1', 'var(--color-light-primary1)');
+    root.style.setProperty('--color-primary2', 'var(--color-light-primary2)');
+    root.style.setProperty('--color-secundary1', 'var(--color-light-secundary1)');
+    root.style.setProperty('--color-secundary2', 'var(--color-light-secundary2)');
+    root.style.setProperty('--color-accent', 'var(--accent-light)');
+    logo.setAttribute("src", "./img/logo/Logotipo-light.png");
+    banner.setAttribute("src", "./img/logo/Fondo-Light.png");
+}
+
+var AutoModeThemeDark;
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    console.log("Dark Mode detected...")
+    buttonDark.classList.add("setux-option--menu-theme-selected");
+    AutoModeThemeDark = true;
+    funDarkMode();
+}else {
+    console.log("Light Mode detected...")
+    buttonNormal.classList.add("setux-option--menu-theme-selected");
+    AutoModeThemeDark = false;
+    funLightMode();
+}
+
+const buttonOptionThemeResponsive = document.querySelector(".nav--bar-button-theme");
+buttonOptionThemeResponsive.addEventListener("click", (e) => {
+    if (AutoModeThemeDark) {
+        funLightMode();
+        AutoModeThemeDark = false;
+    }else {
+        funDarkMode();
+        AutoModeThemeDark = true;
+    }
+});
+
