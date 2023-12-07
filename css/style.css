@@ -208,67 +208,47 @@ nav button {
     position: relative;
 }
 .paragraph {
-    position: absolute;
-    width: 60%;
-    top: 20%;
-    left: 10%;
+    background-image: url('../img/logo/Fondo-Dark.png');
+    background-size: cover; /* Cubre todo el contenedor */
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
     font-family: var(--font-title);
     font-size: 3.7rem;
     user-select: none;
 }
+.div-paragraph--greetting > span:first-child {
+    color: var(--accent-light);
+}
+.div-paragraph--greetting{
+    margin-top: 1em;
+    padding-left: 0.4em;
+}
 .paragraph div {
     line-height: 1em;
 }
-.div-paragraph--up {
-    color: var(--accent-light);
-}
-.div-paragraph--down {
-    position: relative;
-    width: 100%;
-    height: 1em;
-    margin: 0.25em 0;
-}
-.my-name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    justify-content: center;
-}
-.div-paragraph--down span{
-    transition: font-size 0.1s ease-out;
-}
-.div-paragraph--dott {
-    color: var(--color-primary2);
-}
 .div-paragraph--profession {
-    font-size: 0.3em;
+    font-size: 0.6em;
     font-family: var(--font-paragraph);
-    color: var(--color-primary1);
-    background-color: var(--color-primary2);
-    border: 1px solid var(--color-accent);
-    border-radius: 10px;
+    font-style: italic;
+    color: var(--accent-light);
     padding: 0.4em;
-    margin-top: 0.4em;
 }
 .div-paragraph--rrss {
-    margin-top: 0.25em;
+    margin: 0.7em 0;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     color: var(--accent-light);
-    border-bottom: 2px solid var(--accent-light);
 }
 .div-paragraph--rrss button{
     position: relative;
     display: block;
-    width: 0.5em;
-    margin: 0.2em;
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0.3em;
     cursor: pointer;
-    height: 0.5em;
 }
 .div-paragraph--rrss button > svg{
     position: absolute;
@@ -281,6 +261,9 @@ nav button {
 .div-paragraph--rrss button svg:hover {
     transform: scale(125%);
     border-radius: 0.5rem;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: linear;
 }
 .letter-animation-big {
     font-size: 1.3em;
@@ -621,10 +604,6 @@ nav button {
     .div-paragraph--rrss {
         display: none;
     }
-    .div-paragraph--down {
-        font-size: 0.87em;
-        margin: 0.5em 0;
-    }
     .background {
         grid-template-columns: 1fr;
     }
@@ -708,10 +687,6 @@ nav button {
     }
     .div-paragraph--rrss {
         display: none;
-    }
-    .div-paragraph--down {
-        font-size: 0.87em;
-        margin: 0.5em 0;
     }
     .background {
         grid-template-columns: 1fr;
