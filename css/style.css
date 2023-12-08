@@ -265,6 +265,37 @@ nav button {
     transition-property: all;
     transition-timing-function: linear;
 }
+
+.separador-animado {
+    margin: 1.5rem auto;
+    width:80%;
+    background: var(--accent-dark);
+    height: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+  .separador-animado::before {
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-name: separador-animado-animacion;
+    background: var(--accent-light);
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 80px;
+  }
+
+  @keyframes separador-animado-animacion {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(1440px);
+    }
+  }
+
 .letter-animation-big {
     font-size: 1.3em;
     text-shadow: -0.05em 0.05em 0.1em var(--color-accent),
