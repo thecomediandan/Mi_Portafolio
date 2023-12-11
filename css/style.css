@@ -55,11 +55,15 @@ nav {
     justify-items: center;
     align-items: center;
     padding: 1rem;
-    background-color: var(--color-secundary1);
+    background-color: var(--color-dark-primary2);
 }
 nav button {
     cursor: pointer;
     user-select: none;
+}
+
+section {
+    margin: 2rem 0;
 }
 .nav-logo {
     grid-column: 1 / 2;
@@ -85,9 +89,10 @@ nav button {
 .nav-options ul li button{
     margin: 0.7rem;
     padding: 0.7rem;
+    font-family: var(--font-subtitle);
 }
 .nav-options ul li button:hover{
-    color: var(--color-secundary2);
+    color: var(--color-light-primary1);
 }
 .nav-options--button-clicked {
     border: 0.01rem solid var(--color-primary1);
@@ -114,6 +119,7 @@ nav button {
     flex-wrap: nowrap;
     justify-content: left;
     align-items: center;
+    font-family: var(--font-subtitle);
 }
 .nav-setux button span{
     width: 1rem;
@@ -136,10 +142,10 @@ nav button {
     border-radius: 0.5rem;
 }
 .setux-option--menu li:hover{
-    color: var(--color-secundary2);
+    color: var(--color-light-primary1);
 }
 .setux-option--menu-theme-selected, .setux-option--menu-language-selected {
-    color: var(--color-secundary2);
+    color: var(--color-light-primary1);
 }
 
     /* ? RESPONSIVE NAV CONFIGURATION*/
@@ -267,14 +273,14 @@ nav button {
 }
 
 .separador-animado {
-    margin: 1.5rem auto;
+    margin: auto;
     width:80%;
     background: var(--accent-dark);
     height: 1px;
     overflow: hidden;
     position: relative;
-  }
-  .separador-animado::before {
+}
+.separador-animado::before {
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
@@ -285,16 +291,16 @@ nav button {
     height: 2px;
     position: absolute;
     width: 80px;
-  }
+}
 
-  @keyframes separador-animado-animacion {
+@keyframes separador-animado-animacion {
     0% {
       transform: translateX(0px);
     }
     100% {
       transform: translateX(1440px);
     }
-  }
+}
 
 .letter-animation-big {
     font-size: 1.3em;
@@ -355,33 +361,28 @@ nav button {
     margin: 0.5rem;
 }
 .skill-list-model {
+    background-color: var(--color-primary2);
     position: relative;
     z-index: 10;
     padding: 1rem;
-    border: 0.1rem solid var(--color-primary1);
+
     border-radius: 1rem;
 }
 .skill-list-model:hover{
     box-shadow: 0 0 1.5rem 0.5rem var(--color-primary1);
 }
-.skill-list-model--span-text-1 {
-    background-color: var(--color-secundary2);
-    border-radius: 0.2rem;
-    padding: 0.2rem;
-    color: var(--color-light-primary1);
-}
-.skill-list-model--span-text-2 {
-    font-weight: bold;
+.skill-list-model--span-text {
+    font-family: var(--font-subtitle);
     color: var(--color-light-primary1);
 }
 .skill-list-model-title {
     display: inline-block;
-    background-color: var(--color-primary2);
     padding: 0.3rem;
     border-radius: 0.3rem;
 }
 .skill-list-model-title span {
     display: inline-block;
+    font-family: var(--font-subtitle);
 }
 .skill-list-model-title svg {
     width: 1rem;
@@ -422,22 +423,36 @@ nav button {
     width: 50%;
     margin: auto;
     border-radius: 1rem;
-    border: 0.1rem solid var(--color-primary1);
-}
-.main-presentation--frame:hover {
-    box-shadow: 0 0 1.5rem 0.5rem var(--color-primary1);
+    justify-content: center;
 }
 .main-presentation--frame img{
-    width: 40%;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    background-color: var(--color-primary2);
+    /* position: relative;
+    z-index: 10;
+    left: 0.1rem; */
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    /* border-top: 0.1rem solid var(--color-primary1);
+    border-left: 0.1rem solid var(--color-primary1);
+    border-bottom: 0.1rem solid var(--color-primary1); */
 }
 .main-presentation-frame--description {
+    background-color: var(--color-primary2);
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 1rem;
     justify-content: space-between;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    /* border-top: 0.1rem solid var(--color-primary1);
+    border-right: 0.1rem solid var(--color-primary1);
+    border-left: 0.1rem solid var(--color-primary1);
+    border-bottom: 0.1rem solid var(--color-primary1); */
 }
 .main-presentation-frame--description-paragraph p:first-child {
     font-family: var(--font-subtitle);
