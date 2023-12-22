@@ -44,7 +44,7 @@ option4.addEventListener("click", (e) => {
 // Buttons setux hover arrow-down
 buttonTheme.addEventListener("mouseover", (e) => {
     document.querySelector(".div-setux--buttom-theme span")
-    .setAttribute("style", "color: var(--color-secundary2)");
+    .setAttribute("style", "color: var(--color-light-primary1)");
 });
 buttonTheme.addEventListener("mouseout", (e) => {
     document.querySelector(".div-setux--buttom-theme span")
@@ -52,7 +52,7 @@ buttonTheme.addEventListener("mouseout", (e) => {
 });
 buttonLanguage.addEventListener("mouseover", (e) => {
     document.querySelector(".div-setux--buttom-language span")
-    .setAttribute("style", "color: var(--color-secundary2)");
+    .setAttribute("style", "color: var(--color-light-primary1)");
 });
 buttonLanguage.addEventListener("mouseout", (e) => {
     document.querySelector(".div-setux--buttom-language span")

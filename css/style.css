@@ -121,9 +121,16 @@ section {
     align-items: center;
     font-family: var(--font-subtitle);
 }
-.nav-setux button span{
-    width: 1rem;
+.nav-setux .div-setux--buttom-theme span{
+    width: 1.5rem;
     margin: 0 0.25rem;
+}
+.nav-setux .div-setux--buttom-language span{
+    width: 2rem;
+    margin: 0 0.25rem;
+}
+.nav-setux button span:hover{
+    color: var(--color-light-primary1);
 }
 .div-setux--item-menu {
     position: relative;
