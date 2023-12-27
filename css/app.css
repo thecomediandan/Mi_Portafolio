@@ -69,6 +69,7 @@ a {
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
+  overflow-wrap: break-word;
 }
 
 /* Quitamos los puntos de los <li> */
