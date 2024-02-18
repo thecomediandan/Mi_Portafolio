@@ -361,27 +361,15 @@ section {
 
 .table-skill-model {
     display: flex;
-    width: 60%;
+    width: 90%;
     border: 1px solid white;
     border-radius: 1rem;
     margin: auto;
 }
-.table-skill-model-options {
-    display: flex;
-    width: 30%;
-    justify-content: left;
-    padding-top: 1rem;
-    padding-left: 1rem;
-}
-.table-skill-model-options li {
-    margin-bottom: 0.5rem;
-}
 .table-skill-model-content {
-    position: relative;
     display: flex;
-    width: 70%;
+    flex-direction: column;
     padding: 1rem;
-    padding-left: 2rem;
 }
 .table-skill-model-content p {
     margin-bottom: 0.5rem;
@@ -390,12 +378,10 @@ section {
     margin: 0;
     padding: 0;
 }
-.table-skill-model-content .img-anillado{
-    position: absolute;
-    width: 2rem;
-    left: -1rem;
-    top: 0;
-    height: 100%;
+.table-skill-model-content-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .main-skills--table {
