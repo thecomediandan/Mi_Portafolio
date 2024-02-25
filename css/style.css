@@ -648,10 +648,15 @@ section {
     border-radius: 1rem;
     margin-bottom: 2.5rem;
 }
-.project-list-model > img{
+.project-list-model-with-image {
+    position: relative;
+    z-index: 20;
+}
+.project-list-model-with-image > img{
     position: absolute;
-    z-index: 99;
+    z-index: 19;
     width: 25rem;
+    border-radius: 1rem;
 }
 /* .project-list-model:hover {
     box-shadow: 0 0 1.5rem 0.5rem var(--color-primary1);
@@ -697,12 +702,14 @@ section {
 }
 .project-list-model--description-tech > p {
     padding: 1rem;
+    color: white;
 }
 .project-list-model--tech-buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .project-list-model--tech-buttons button{
     width: 2rem;
@@ -711,8 +718,78 @@ section {
     margin: 0.5rem;
 }
 
-
-
+#main-contact h2 {
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+.contact-form {
+    background: radial-gradient(circle, rgba(0,252,255,0.3) 50%, rgba(0,0,0,0) 80%); 
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+.contact-form form {
+    background-color: var(--color-primary2);
+    width: 25rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.contact-form form h3{
+    font-family: var(--font-subtitle);
+}
+.contact-form form input{
+    background-image: linear-gradient(to right, var(--color-dark-secundary1), transparent);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    outline-style: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(to right, var(--accent-dark), transparent);
+    border-image-slice: 1;
+}
+.contact-form form input::placeholder{
+    color: white;
+}
+.contact-form form textarea::placeholder{
+    color: white;
+}
+.contact-form form textarea{
+    background-image: linear-gradient(to right, var(--color-dark-secundary1), transparent);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    outline-style: none;
+    overflow-y: auto;
+    width: 100%;
+    height: 6rem;
+    resize: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(to right, var(--accent-dark), transparent);
+    border-image-slice: 1;
+}
+.contact-form form button{
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-dark-primary1);
+    border-radius: 0.5rem;
+    background-color: var(--color-dark-secundary1);
+}
+.contact-form img {
+    width: 20rem;
+    object-fit: scale-down;
+}
 
 /*
 @media (prefers-color-scheme: light) {
