@@ -35,7 +35,6 @@
 }
 
 body {
-    margin: auto;
     font-family: var(--font-paragraph);
     color: var(--color-primary1);
     background-color: var(--color-secundary1);
@@ -56,7 +55,7 @@ nav {
     font-size: 0.9rem;
     display: grid;
     width: 80%;
-    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-columns: 1fr 6fr 1fr;
     justify-items: center;
     align-items: center;
     padding: 1rem;
@@ -68,7 +67,7 @@ nav button {
 }
 
 section {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 .nav-logo {
     grid-column: 1 / 2;
@@ -279,7 +278,7 @@ section {
 .div-paragraph--rrss button svg:hover {
     transform: scale(125%);
     border-radius: 0.5rem;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transition-property: all;
     transition-timing-function: linear;
 }
@@ -368,17 +367,10 @@ section {
 }
 .card-skill-work-experience{
     width: 30%;
-    border: 1px solid gray;
+    height: fit-content;
+    padding: 0.5rem 0;
     border-radius: 1rem;
-}
-.card-skill-work-experience h3 {
-    text-align: center;
-    padding: 0.5rem;
-    background-color: var(--color-dark-primary2);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    font-size: 1.1rem;
-    font-family: var(--font-subtitle);
+    background-color: var(--color-primary2);
 }
 .card-skill-work-experience .work-presentation {
     margin: 1rem;
@@ -393,18 +385,29 @@ section {
 }
 .card-skill-work-experience .work-presentation h4 {
     font-family: var(--font-subtitle);
+    color: var(--accent-cyan);
 }
 .card-skill-work-experience .work-presentation h5 {
     font-size: small;
+    color: white;
 }
 .work-description {
     padding: 0 1rem 1rem 1rem;
+    color: white;
 }
 .work-description h4 {
     font-family: var(--font-subtitle);
+    color: var(--color-light-secundary1);
 }
 .work-character {
     padding: 0 1rem 1rem 1rem;
+    color: white;
+}
+.work-character li i{
+    color: var(--color-light-secundary1);
+}
+.work-character li {
+    margin-bottom: 1rem;
 }
 .technologies-applicated {
     display: flex;
@@ -412,49 +415,9 @@ section {
     padding: 0 1rem 1rem 1rem;
     justify-content: center;
 }
-.technologies-applicated img {
+.technologies-applicated svg {
     width: 2rem;
     margin: 0.2rem;
-}
-
-.table-skill-model {
-    display: flex;
-    width: 80%;
-    border: 1px solid gray;
-    border-radius: 1rem;
-    margin: auto;
-}
-.table-skill-model-content {
-    display: flex;
-    flex-direction: column;
-}
-.table-skill-model-content-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.table-skill-model-content-menu button {
-    margin: 0.5rem;
-}
-.carousel-table-skill {
-    position: relative;
-}
-.carousel-skill-buttons {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: grey;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-.carousel-skill-button {
-    margin: 0.2rem;
-}
-.item-carousel-skill {
-    padding: 1rem;
 }
 
 #main-skills h2 {
@@ -462,75 +425,6 @@ section {
     font-family: var(--font-title);
     font-size: xx-large;
     margin-bottom: 2rem;
-}
-
-.main-skills--table {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    margin: auto;
-    width: 80%;
-    justify-content: space-evenly;
-}
-.main-skills--table > div{
-    width: 20em;
-    margin: 0.5rem;
-}
-.skill-list-model {
-    background-color: var(--color-primary2);
-    position: relative;
-    z-index: 10;
-    padding: 1rem;
-
-    border-radius: 1rem;
-}
-.skill-list-model:hover{
-    box-shadow: 0 0 1.5rem 0.5rem var(--color-primary1);
-}
-.skill-list-model--span-text {
-    font-family: var(--font-subtitle);
-    color: var(--color-light-primary1);
-}
-.skill-list-model-title {
-    display: inline-block;
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-}
-.skill-list-model-title span {
-    display: inline-block;
-    font-family: var(--font-subtitle);
-}
-.skill-list-model-title svg {
-    width: 1rem;
-    margin-right: 0.5rem;
-}
-.skill-list-model-block {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border-left: 0.1rem solid var(--color-primary1);
-}
-.skill-list-model-block hr {
-    display: inline-block;
-    margin: 0.25rem 0;
-    margin-right: 0.5rem;
-    width: 2rem;
-    background-color: var(--color-primary1);
-}
-.skill-list-model-block li {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-.skill-list-model-block.techs li p {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.skill-list-model-block.techs li p a{
-    margin: 0.3rem;
 }
 
 #main-presentation {
@@ -737,12 +631,14 @@ section {
 }
 .contact-form form {
     background-color: var(--color-primary2);
-    width: 25rem;
+    width: 38%;
     border-radius: 1rem;
     padding: 2rem;
 }
 .contact-form form h3{
     font-family: var(--font-subtitle);
+    margin-bottom: 2rem;
+    font-size: larger;
 }
 .contact-form form input{
     background-image: linear-gradient(to right, var(--color-dark-secundary1), transparent);
@@ -787,10 +683,71 @@ section {
     background-color: var(--color-dark-secundary1);
 }
 .contact-form img {
-    width: 20rem;
-    object-fit: scale-down;
+    width: 30%;
+    object-fit: contain;
 }
 
+
+footer{
+    background-color: var(--color-dark-primary2);
+    padding-top: 2rem;
+}
+#main-footer{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.footer-logo{
+    width: 20%;
+}
+.footer-logo .footer-logo--social{
+    font-size: 3rem;
+    color: white;
+    margin: 1rem auto;
+}
+.footer-languages{
+    width: 20%;
+}
+.footer-languages .footer-languages--programation{
+    margin-top: 1rem;
+}
+.footer-languages .footer-languages--programation > svg{
+    width: 3rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.footer-technologies{
+    width: 20%;
+}
+.footer-technologies .footer-technologies--programation{
+    margin-top: 1rem;
+}
+.footer-technologies .footer-technologies--programation > svg{
+    width: 3rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.footer-information{
+    width: 20%;
+}
+.footer-information ul{
+    margin-top: 1rem;
+}
+#end-footer{
+    margin: 2rem 0 0 0;
+}
+#end-footer p{
+    text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+}
 /*
 @media (prefers-color-scheme: light) {
     body{
