@@ -148,7 +148,7 @@ buttonOptionResponsive.addEventListener("click", (e) => {
 function funDarkMode() {
     const root = document.documentElement;
     const logo = document.querySelector(".nav-logo > img");
-    const banner = document.querySelector(".div-background");
+    const banner = document.querySelector(".paragraph");
     const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
     const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
     const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
@@ -163,12 +163,12 @@ function funDarkMode() {
     root.style.setProperty('--color-secundary2', 'var(--color-dark-secundary2)');
     root.style.setProperty('--color-accent', 'var(--accent-dark)');
     logo.setAttribute("src", "./img/logo/Logotipo-dark.png");
-    banner.setAttribute("src", "./img/logo/Fondo-Dark.png");
+    banner.setAttribute("style", "background-image: url('../img/logo/Fondo-Dark.png');");
 }
 function funLightMode() {
     const root = document.documentElement;
     const logo = document.querySelector(".nav-logo > img");
-    const banner = document.querySelector(".div-background");
+    const banner = document.querySelector(".paragraph");
     const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
     const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
     const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
@@ -182,7 +182,7 @@ function funLightMode() {
     root.style.setProperty('--color-secundary2', 'var(--color-light-secundary2)');
     root.style.setProperty('--color-accent', 'var(--accent-light)');
     logo.setAttribute("src", "./img/logo/Logotipo-light.png");
-    banner.setAttribute("src", "./img/logo/Fondo-Light.png");
+    banner.setAttribute("style", "background-image: url('../img/logo/Fondo-Light.png');");
 }
 
 var AutoModeThemeDark;

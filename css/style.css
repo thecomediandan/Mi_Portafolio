@@ -59,7 +59,7 @@ nav {
     justify-items: center;
     align-items: center;
     padding: 1rem;
-    background-color: var(--color-dark-primary2);
+    /* background-color: var(--color-dark-primary2); */
 }
 nav button {
     cursor: pointer;
