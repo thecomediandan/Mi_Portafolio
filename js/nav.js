@@ -165,7 +165,7 @@ buttonOptionResponsive.addEventListener("click", (e) => {
         buttonCloseOptionResponsive.removeEventListener("click", e)
     });
 
-    frameOption.addEventListener("mouseout", (e) => {
+    frameOption.addEventListener("mouseover", (e) => {
         frameOption.setAttribute("style", "display: none;");
         document.querySelector("body").setAttribute("style", "overflow-y: auto;")
         buttonCloseOptionResponsive.removeEventListener("click", e)
@@ -178,13 +178,13 @@ function funDarkMode() {
     const logo = document.querySelector(".nav-logo > img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
-    const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
-    const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
-    const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
+    // const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
+    // const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
+    // const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
 
-    iconThemeDarkResponsive.setAttribute("style", "display: block;");
-    iconThemeLightResponsive.setAttribute("style", "display: none;");
-    logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Dark.png");
+    // iconThemeDarkResponsive.setAttribute("style", "display: block;");
+    // iconThemeLightResponsive.setAttribute("style", "display: none;");
+    // logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Dark.png");
 
     root.style.setProperty('--color-primary1', 'var(--color-dark-primary1)');
     root.style.setProperty('--color-primary2', 'var(--color-dark-primary2)');
@@ -200,13 +200,13 @@ function funLightMode() {
     const logo = document.querySelector(".nav-logo > img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
-    const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
-    const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
-    const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
+    // const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
+    // const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
+    // const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
 
-    iconThemeDarkResponsive.setAttribute("style", "display: none;");
-    iconThemeLightResponsive.setAttribute("style", "display: block;");
-    logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Light.png");
+    // iconThemeDarkResponsive.setAttribute("style", "display: none;");
+    // iconThemeLightResponsive.setAttribute("style", "display: block;");
+    // logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Light.png");
     root.style.setProperty('--color-primary1', 'var(--color-light-primary1)');
     root.style.setProperty('--color-primary2', 'var(--color-light-primary2)');
     root.style.setProperty('--color-secundary1', 'var(--color-light-secundary1)');
