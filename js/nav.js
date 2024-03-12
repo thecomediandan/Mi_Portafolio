@@ -3,6 +3,13 @@ const option2 = document.querySelector(".nav-options--button-2");
 const option3 = document.querySelector(".nav-options--button-3");
 const option4 = document.querySelector(".nav-options--button-4");
 
+const optionMobile1 = document.querySelector(".nav-options-mobile--button-1");
+const optionMobile2 = document.querySelector(".nav-options-mobile--button-2");
+const optionMobile3 = document.querySelector(".nav-options-mobile--button-3");
+const optionMobile4 = document.querySelector(".nav-options-mobile--button-4");
+
+const buttomHomeMain = document.querySelector(".button-home-main > button");
+
 const buttonTheme = document.querySelector(".div-setux--buttom-theme");
 const buttonDarkTheme = document.querySelectorAll('.div-setux--buttom-theme span')[0];
 const buttonLightTheme = document.querySelectorAll('.div-setux--buttom-theme span')[1];
@@ -11,12 +18,6 @@ const buttonLanguageEnglish = document.querySelectorAll(".menu-language button")
 const personalName = document.querySelector('.wave-name');
 const areaMenuTheme = document.querySelector(".menu-theme");
 const areaMenuLanguage = document.querySelector(".menu-language");
-// const menus = document.querySelectorAll(".setux-option--menu");
-// const buttonAuto = document.querySelector(".setux-option--menu-auto");
-// const buttonNormal = document.querySelector(".setux-option--menu-normal");
-// const buttonDark = document.querySelector(".setux-option--menu-dark");
-// const buttonEnglish = document.querySelector(".setux-option--menu-english");
-// const buttonSpanish = document.querySelector(".setux-option--menu-spanish");
 
 // ? Animation name
 personalName.addEventListener('mouseenter', (e) => {
@@ -30,30 +31,73 @@ personalName.addEventListener('mouseout', (e) => {
 
 
 // Click event of options buttons
-// option1.addEventListener("click", (e) => {
-//     if (!option1.classList.contains("nav-options--button-clicked")) {
-//         cleanClickedOptions("nav-options--button-clicked");
-//         option1.classList.add("nav-options--button-clicked");
-//     }
-// });
-// option2.addEventListener("click", (e) => {
-//     if (!option2.classList.contains("nav-options--button-clicked")) {
-//         cleanClickedOptions("nav-options--button-clicked");
-//         option2.classList.add("nav-options--button-clicked");
-//     }
-// });
-// option3.addEventListener("click", (e) => {
-//     if (!option3.classList.contains("nav-options--button-clicked")) {
-//         cleanClickedOptions("nav-options--button-clicked");
-//         option3.classList.add("nav-options--button-clicked");
-//     }
-// });
-// option4.addEventListener("click", (e) => {
-//     if (!option4.classList.contains("nav-options--button-clicked")) {
-//         cleanClickedOptions("nav-options--button-clicked");
-//         option4.classList.add("nav-options--button-clicked");
-//     }
-// });
+buttomHomeMain.addEventListener("click", (e) => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+option1.addEventListener("click", (e) => {
+    const sectionWorkExperience = document.getElementById("main-skills");
+    sectionWorkExperience.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+option2.addEventListener("click", (e) => {
+    const sectionWhoIAm = document.getElementById("main-presentation");
+    sectionWhoIAm.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+option3.addEventListener("click", (e) => {
+    const sectionProjects = document.getElementById("main-projects");
+    sectionProjects.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+option4.addEventListener("click", (e) => {
+    const sectionContact = document.getElementById("main-contact");
+    sectionContact.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+
+optionMobile1.addEventListener("click", (e) => {
+    const sectionWorkExperience = document.getElementById("main-skills");
+    let frameOption = document.querySelector(".nav-bar-option");
+    frameOption.setAttribute("style", "display: none;");
+    document.querySelector("body").setAttribute("style", "overflow-y: auto;");
+    sectionWorkExperience.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+optionMobile2.addEventListener("click", (e) => {
+    const sectionWhoIAm = document.getElementById("main-presentation");
+    let frameOption = document.querySelector(".nav-bar-option");
+    frameOption.setAttribute("style", "display: none;");
+    document.querySelector("body").setAttribute("style", "overflow-y: auto;");
+    sectionWhoIAm.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+optionMobile3.addEventListener("click", (e) => {
+    const sectionProjects = document.getElementById("main-projects");
+    let frameOption = document.querySelector(".nav-bar-option");
+    frameOption.setAttribute("style", "display: none;");
+    document.querySelector("body").setAttribute("style", "overflow-y: auto;");
+    sectionProjects.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+optionMobile4.addEventListener("click", (e) => {
+    const sectionContact = document.getElementById("main-contact");
+    let frameOption = document.querySelector(".nav-bar-option");
+    frameOption.setAttribute("style", "display: none;");
+    document.querySelector("body").setAttribute("style", "overflow-y: auto;");
+    sectionContact.scrollIntoView({
+        behavior: "smooth",
+    });
+});
 
 // Buttons setux hover arrow-down
 // buttonTheme.addEventListener("mouseover", (e) => {
