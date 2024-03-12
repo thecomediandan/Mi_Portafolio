@@ -108,25 +108,10 @@ buttonTheme.addEventListener("click", (e) => {
         funDarkMode();
     }
 });
-// buttonNormal.addEventListener("click", (e) => {
-//     if (!buttonNormal.classList.contains("setux-option--menu-theme-selected")) {
-//         cleanClickedOptions("setux-option--menu-theme-selected");
-//         buttonNormal.classList.add("setux-option--menu-theme-selected");
 
-//         funLightMode();
-//     }
-// });
-// buttonDark.addEventListener("click", (e) => {
-//     if (!buttonDark.classList.contains("setux-option--menu-theme-selected")) {
-//         cleanClickedOptions("setux-option--menu-theme-selected");
-//         buttonDark.classList.add("setux-option--menu-theme-selected");
+// if (root.style.getPropertyValue('--color-light-primary1') === 'blue') to original value
+// if (getComputedStyle(root).getPropertyValue('--color-primary').trim() === 'blue') to exact value
 
-//         funDarkMode();
-
-//         // if (root.style.getPropertyValue('--color-light-primary1') === 'blue') to original value
-//         // if (getComputedStyle(root).getPropertyValue('--color-primary').trim() === 'blue') to exact value
-//     }
-// });
 
 buttonLanguageSpanish.addEventListener("click", (e) => {
     if (!buttonLanguageSpanish.classList.contains("language-activated")) {
@@ -154,21 +139,15 @@ buttonLanguageEnglish.addEventListener("click", (e) => {
 
 const buttonOptionResponsive = document.querySelector(".nav--bar-button-option");
 buttonOptionResponsive.addEventListener("click", (e) => {
-    let frameOption = document.querySelector(".nav-bar-option--frame");
+    let frameOption = document.querySelector(".nav-bar-option");
     frameOption.setAttribute("style", "display: flex;");
-    document.querySelector("body").setAttribute("style", "overflow-y: hidden;")
+    document.querySelector("body").setAttribute("style", "overflow-y: hidden;");
 
     const buttonCloseOptionResponsive = document.querySelector(".nav--bar-button-close");
     buttonCloseOptionResponsive.addEventListener("click", (e) => {
         frameOption.setAttribute("style", "display: none;");
-        document.querySelector("body").setAttribute("style", "overflow-y: auto;")
-        buttonCloseOptionResponsive.removeEventListener("click", e)
-    });
-
-    frameOption.addEventListener("mouseover", (e) => {
-        frameOption.setAttribute("style", "display: none;");
-        document.querySelector("body").setAttribute("style", "overflow-y: auto;")
-        buttonCloseOptionResponsive.removeEventListener("click", e)
+        document.querySelector("body").setAttribute("style", "overflow-y: auto;");
+        buttonCloseOptionResponsive.removeEventListener("click", e);
     });
 });
 
@@ -178,13 +157,6 @@ function funDarkMode() {
     const logo = document.querySelector(".nav-logo > img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
-    // const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
-    // const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
-    // const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
-
-    // iconThemeDarkResponsive.setAttribute("style", "display: block;");
-    // iconThemeLightResponsive.setAttribute("style", "display: none;");
-    // logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Dark.png");
 
     root.style.setProperty('--color-primary1', 'var(--color-dark-primary1)');
     root.style.setProperty('--color-primary2', 'var(--color-dark-primary2)');
@@ -200,13 +172,7 @@ function funLightMode() {
     const logo = document.querySelector(".nav-logo > img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
-    // const iconThemeDarkResponsive = document.querySelector(".nav--bar-icon-theme-dark");
-    // const iconThemeLightResponsive = document.querySelector(".nav--bar-icon-theme-light");
-    // const logoBarOptionResponsive = document.querySelector(".nav-bar-option--logo img");
 
-    // iconThemeDarkResponsive.setAttribute("style", "display: none;");
-    // iconThemeLightResponsive.setAttribute("style", "display: block;");
-    // logoBarOptionResponsive.setAttribute("src", "./img/logo/Dog-Light.png");
     root.style.setProperty('--color-primary1', 'var(--color-light-primary1)');
     root.style.setProperty('--color-primary2', 'var(--color-light-primary2)');
     root.style.setProperty('--color-secundary1', 'var(--color-light-secundary1)');
