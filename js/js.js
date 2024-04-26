@@ -25,14 +25,18 @@
   function aplicarTraducciones(traducciones) {
     // Itera sobre las traducciones y reemplaza el contenido en la página
     for (var clave in traducciones) {
-      if (traducciones.hasOwnProperty(clave)) {
-        console.log(clave)
         var elemento = document.querySelector("[data-traduction='" + clave + "']");
-        console.log(elemento)
         if (elemento) {
           elemento.textContent = traducciones[clave];
         }
-      }
+      // if (traducciones.hasOwnProperty(clave)) {
+      //   console.log(clave)
+      //   var elemento = document.querySelector("[data-traduction='" + clave + "']");
+      //   console.log(elemento)
+      //   if (elemento) {
+      //     elemento.textContent = traducciones[clave];
+      //   }
+      // }
     }
   }
   
