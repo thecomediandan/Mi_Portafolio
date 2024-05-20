@@ -10,16 +10,28 @@
   });
   
   function cargarTraducciones(idioma) {
-    // Realiza una solicitud AJAX para cargar el archivo de idioma correspondiente
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "./../content/config/" + idioma + ".json", true);
-    xhr.onload = function() {
-      if (xhr.status == 200) {
-        var traducciones = JSON.parse(xhr.responseText);
+    // Utilizando Fetch
+    fetch("./../content/config/" + idioma + ".json").then(function(response){
+      response.json().then(function(traducciones){
+        console.log(traducciones);
         aplicarTraducciones(traducciones);
-      }
-    };
-    xhr.send();
+      });
+      // console.log(traducciones);
+      // aplicarTraducciones(traducciones);
+    }).catch(function(error) {
+      console.log(error);
+    });
+
+    // Realiza una solicitud AJAX para cargar el archivo de idioma correspondiente
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("GET", "./../content/config/" + idioma + ".json", true);
+    // xhr.onload = function() {
+    //   if (xhr.status == 200) {
+    //     var traducciones = JSON.parse(xhr.responseText);
+    //     aplicarTraducciones(traducciones);
+    //   }
+    // };
+    // xhr.send();
   }
   
   function aplicarTraducciones(traducciones) {
