@@ -6,5 +6,22 @@
     "nav-mobile-work-experience": "WORK EXPERIENCE",
     "nav-mobile-who-am-i": "WHO AM I?",
     "nav-mobile-projects": "PROJECTS",
-    "nav-mobile-connect-with-me": "CONNECT WITH ME"
+    "nav-mobile-connect-with-me": "CONNECT WITH ME",
+    "span-hi": "HI ",
+    "span-im": ", I'M",
+    "div-software-developer": "SOFTWARE DEVELOPER",
+    "h2-work-experience": "WORK EXPERIENCE",
+    "p-who-am-i": "WHO AM I?",
+    "p-description-1": "A passionate and versatile software developer, ready to tackle different technologies as needed.",
+    "p-description-2": "Graduated from the Universidad Mayor de San Andrés in the city of La Paz, Bolivia, with a degree in Systems Engineering, and holding various technical certifications in the field of programming.",
+    "p-description-3": "As a person outside of the professional environment, I am sociable and highly communicative.",
+    "span-download-cv": "DOWNLOAD CV",
+    "h2-own-projects": "PROJECTS AND APLICATIONS",
+    "h2-connect-with-me": "CONNECT WITH ME",
+    "span-send-me-a-message": "SEND ME A MESSAGE",
+    "span-send": "SEND",
+    "h3-languages-programation": "Programming languages",
+    "h3-tool-tech": "Tools and technologies",
+    "h3-inf-contact": "Contact infomation",
+    "p-created-by": "By Daniel Q.K."
 }
