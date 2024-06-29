@@ -427,14 +427,16 @@ section {
 .cards-work-experience {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: auto;
     justify-content: space-evenly;
 }
 .card-skill-work-experience{
-    width: 30%;
+    width: 327px;
+    margin-bottom: 1.5rem;
     height: fit-content;
-    padding: 0.5rem 0;
+    padding: 0;
     border-radius: 1rem;
     background-color: var(--color-primary2);
     border: 2px dotted var(--color-primary1);
@@ -453,6 +455,7 @@ section {
 .card-skill-work-experience .work-presentation h4 {
     font-family: var(--font-subtitle);
     color: var(--color-primary1);
+    text-shadow: 0 0 0.5rem var(--color-secundary1);
 }
 .card-skill-work-experience .work-presentation h5 {
     font-size: small;
@@ -466,6 +469,94 @@ section {
     font-family: var(--font-subtitle);
     color: var(--color-primary1);
 }
+
+.work-presentation-test {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* background-image: url('./../img/banner-codeIgniter.png');
+    background-size: cover;
+    background-position: center; */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    height: 10rem;
+}
+.work-presentation-test img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 327px;
+    height: 10rem;
+    z-index: 0;
+    object-fit: cover;
+    filter: blur(0.1rem);
+}
+.work-presentation-test .work-title {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-subtitle);
+    color: white;
+    text-shadow: 0 0 0.5rem var(--color-secundary1);
+    font-size: 1.5rem;
+}
+.work-presentation-test .work-info{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    z-index: 10;
+}
+.work-info .work-info-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: small;
+    color: white;
+}
+.work-info-tags .work-info-tag {
+    margin: 0 0.2rem;
+    background-color: var(--color-light-secundary2);
+    padding: 0.1rem 0.3rem;
+    border-radius: 10px;
+}
+.work-info a {
+    font-family: var(--font-subtitle);
+    color: white;
+    text-shadow: 0 0 0.5rem var(--color-secundary1);
+}
+
+.work-character-test {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    background-image: linear-gradient(to bottom, transparent, orangered);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.work-tag {
+    display: block;
+    font-size: small;
+    background-color: var(--color-light-secundary2);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.1rem 0.3rem;
+    margin: 0.2rem;
+}
+
 .work-character {
     padding: 0 1rem 1rem 1rem;
     color: white;
@@ -892,9 +983,9 @@ footer{
     .cards-work-experience {
         width: 100%;
     }
-    .card-skill-work-experience {
+    /* .card-skill-work-experience {
         width: 30%;
-    }
+    } */
     #main-presentation {
         width: 100%;
     }
@@ -982,10 +1073,10 @@ footer{
     .cards-work-experience{
         flex-wrap: wrap;
     }
-    .card-skill-work-experience {
+    /* .card-skill-work-experience {
         width: 100%;
         margin-bottom: 1.5rem;
-    }
+    } */
     #main-presentation {
         width: 100%;
     }
@@ -1090,10 +1181,10 @@ footer{
         flex-wrap: wrap;
         width: 90%;
     }
-    .card-skill-work-experience {
+    /* .card-skill-work-experience {
         width: 100%;
         margin-bottom: 1.5rem;
-    }
+    } */
     #main-presentation {
         width: 100%;
     }
