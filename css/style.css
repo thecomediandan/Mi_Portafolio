@@ -709,8 +709,10 @@ section {
 }
 .project-list-model-with-image > img{
     position: absolute;
+    left: calc((25rem / 2) - (25rem / 4));
     z-index: 19;
-    width: 25rem;
+    height: 25rem;
+    width: calc(25rem / 2);
     border-radius: 1rem;
 }
 /* .project-list-model:hover {
