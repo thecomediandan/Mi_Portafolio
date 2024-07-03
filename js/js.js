@@ -52,3 +52,16 @@
     }
   }
   
+  // * Animacción de Proyectos y Aplicaciones
+  const aplicaciones = document.querySelectorAll(".project-list-model-with-image");
+  // console.log(aplicaciones[0].children[1].children[1].children[0]);
+
+  aplicaciones.forEach((aplicacion) => {
+    console.log(aplicacion.children[1].children[1].children[0]);
+    aplicacion.addEventListener("mouseover", (e) => {
+      aplicacion.children[1].children[1].children[0].classList.add("p-description-animation");
+    });
+    aplicacion.addEventListener("mouseout", (e) => {
+      aplicacion.children[1].children[1].children[0].classList.remove("p-description-animation");
+    });
+  });
