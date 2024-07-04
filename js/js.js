@@ -1,12 +1,23 @@
   const lanSpanish = document.querySelector(".div-setux--buttom-language--spanish");
   const lanEnglish = document.querySelector(".div-setux--buttom-language--english");
 
+  const form = document.querySelector(".contact-form form");
+  const formName = form.children[2];
+  const formEmail = form.children[3];
+  const formMessage = form.children[4];
+
   lanSpanish.addEventListener("click", function() {
     cargarTraducciones("es");
+    lanSpanish.classList.add("language-activated");
+    lanEnglish.classList.toggle("language-activated");
+    formInputsSpanish();
   });
 
   lanEnglish.addEventListener("click", function() {
     cargarTraducciones("en");
+    lanEnglish.classList.add("language-activated");
+    lanSpanish.classList.toggle("language-activated");
+    formInputsEnglish();
   });
   
   function cargarTraducciones(idioma) {
@@ -50,6 +61,35 @@
       //   }
       // }
     }
+  }
+
+  // * Detectar el idioma del sistema
+  var systemLanguage = navigator.language || navigator.userLanguage;
+
+  console.log(systemLanguage);
+
+  if (systemLanguage.startsWith("es")) {
+    cargarTraducciones("es");
+    lanSpanish.classList.add("language-activated");
+    lanEnglish.classList.toggle("language-activated");
+    formInputsSpanish();
+  } else {
+    cargarTraducciones("en");
+    lanEnglish.classList.add("language-activated");
+    lanSpanish.classList.toggle("language-activated");
+    formInputsEnglish();
+  }
+
+  // ? Cambio de idiomas para el formulario
+  function formInputsSpanish() {    
+    formName.setAttribute.apply(formName, ["placeholder", "Nombre"]);
+    formEmail.setAttribute.apply(formEmail, ["placeholder", "Correo"]);
+    formMessage.setAttribute.apply(formMessage, ["placeholder", "Mensaje"]);
+  }
+  function formInputsEnglish() {    
+    formName.setAttribute.apply(formName, ["placeholder", "Name"]);
+    formEmail.setAttribute.apply(formEmail, ["placeholder", "Email"]);
+    formMessage.setAttribute.apply(formMessage, ["placeholder", "Message"]);
   }
   
   // * Animacción de Proyectos y Aplicaciones

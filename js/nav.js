@@ -13,8 +13,8 @@ const buttomHomeMain = document.querySelector(".button-home-main > button");
 const buttonTheme = document.querySelector(".div-setux--buttom-theme");
 const buttonDarkTheme = document.querySelectorAll('.div-setux--buttom-theme span')[0];
 const buttonLightTheme = document.querySelectorAll('.div-setux--buttom-theme span')[1];
-const buttonLanguageSpanish = document.querySelectorAll(".menu-language button")[0];
-const buttonLanguageEnglish = document.querySelectorAll(".menu-language button")[1];
+// const buttonLanguageSpanish = document.querySelectorAll(".menu-language button")[0];
+// const buttonLanguageEnglish = document.querySelectorAll(".menu-language button")[1];
 const personalName = document.querySelector('.wave-name');
 const areaMenuTheme = document.querySelector(".menu-theme");
 const areaMenuLanguage = document.querySelector(".menu-language");
@@ -157,21 +157,21 @@ buttonTheme.addEventListener("click", (e) => {
 // if (getComputedStyle(root).getPropertyValue('--color-primary').trim() === 'blue') to exact value
 
 
-buttonLanguageSpanish.addEventListener("click", (e) => {
-    if (!buttonLanguageSpanish.classList.contains("language-activated")) {
-        buttonLanguageSpanish.classList.add("language-activated");
-        buttonLanguageEnglish.classList.toggle("language-activated");
-        // TO DO 
-    }
+// buttonLanguageSpanish.addEventListener("click", (e) => {
+//     if (!buttonLanguageSpanish.classList.contains("language-activated")) {
+//         buttonLanguageSpanish.classList.add("language-activated");
+//         buttonLanguageEnglish.classList.toggle("language-activated");
+//         // TO DO 
+//     }
 
-});
-buttonLanguageEnglish.addEventListener("click", (e) => {
-    if (!buttonLanguageEnglish.classList.contains("language-activated")) {
-        buttonLanguageEnglish.classList.add("language-activated");
-        buttonLanguageSpanish.classList.toggle("language-activated");
-        // TO DO
-    }
-});
+// });
+// buttonLanguageEnglish.addEventListener("click", (e) => {
+//     if (!buttonLanguageEnglish.classList.contains("language-activated")) {
+//         buttonLanguageEnglish.classList.add("language-activated");
+//         buttonLanguageSpanish.classList.toggle("language-activated");
+//         // TO DO
+//     }
+// });
 
 
 // function cleanClickedOptions(selected) {
