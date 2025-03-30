@@ -1,3 +1,4 @@
+// Animacion de los botones de EN | ES
 const lanSpanish = document.querySelector(
   ".div-setux--buttom-language--spanish",
 );
@@ -11,19 +12,24 @@ const formEmail = form.children[3];
 const formMessage = form.children[4];
 
 lanSpanish.addEventListener("click", function () {
-  cargarTraducciones("es");
-  lanSpanish.classList.add("language-activated");
-  lanEnglish.classList.toggle("language-activated");
-  formInputsSpanish();
+  if (!lanSpanish.classList.contains("language-activated")) {
+    cargarTraducciones("es");
+    lanSpanish.classList.add("language-activated");
+    lanEnglish.classList.toggle("language-activated");
+    formInputsSpanish();
+  }
 });
 
 lanEnglish.addEventListener("click", function () {
-  cargarTraducciones("en");
-  lanEnglish.classList.add("language-activated");
-  lanSpanish.classList.toggle("language-activated");
-  formInputsEnglish();
+  if (!lanEnglish.classList.contains("language-activated")) {
+    cargarTraducciones("en");
+    lanEnglish.classList.add("language-activated");
+    lanSpanish.classList.toggle("language-activated");
+    formInputsEnglish();
+  }
 });
 
+// Carga del archivo traducciones
 function cargarTraducciones(idioma) {
   // Utilizando Fetch
   fetch("./../content/config/" + idioma + ".json")
