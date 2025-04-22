@@ -1,3 +1,5 @@
+import sendMessage from "./sendMessage.js";
+
 // Animacion de los botones de EN | ES
 const lanSpanish = document.querySelector(
   ".div-setux--buttom-language--spanish",
@@ -6,6 +8,7 @@ const lanEnglish = document.querySelector(
   ".div-setux--buttom-language--english",
 );
 
+// Variables del formulario
 const form = document.querySelector(".contact-form form");
 const formName = form.children[2];
 const formEmail = form.children[3];
@@ -103,6 +106,15 @@ function formInputsEnglish() {
   formEmail.setAttribute.apply(formEmail, ["placeholder", "Email"]);
   formMessage.setAttribute.apply(formMessage, ["placeholder", "Message"]);
 }
+
+// ? Evento de envio de mensaje del formulario al correo electronico
+// mediante el servicio de EmailJS
+// const buttonSubmitForm = document.querySelector("form > button[type='submit']");
+
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
+  await sendMessage(formEmail.value, formName.value, formMessage.value);
+});
 
 // * Animacción de Proyectos y Aplicaciones
 const aplicaciones = document.querySelectorAll(
