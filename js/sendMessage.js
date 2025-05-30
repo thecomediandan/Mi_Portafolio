@@ -1,4 +1,4 @@
-export default async function sendMessage(
+export default function sendMessage(
   clientEmail,
   clientName,
   clientMessage,
@@ -16,7 +16,7 @@ export default async function sendMessage(
     },
   };
 
-  await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+  return fetch("https://api.emailjs.com/api/v1.0/email/send", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,10 +30,11 @@ export default async function sendMessage(
         // console.log(resJson);
       } else {
         console.error("Fallo el envio del mensaje.");
+        throw Exception("Fallo el envio del mensaje.");
         // console.log(resJson);
       }
     })
-    .catch((reason) => {
-      console.log("Failed to send message:" + reason);
-    });
+    // .catch((reason) => {
+    //   console.log("Failed to send message:" + reason);
+    // });
 }

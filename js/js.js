@@ -8,12 +8,21 @@ const lanEnglish = document.querySelector(
   ".div-setux--buttom-language--english",
 );
 
-// Variables del formulario
+// ? Variables del formulario
 const form = document.querySelector(".contact-form form");
-const formName = form.children[2];
-const formEmail = form.children[3];
-const formMessage = form.children[4];
+// const formName = form.children[2];
+// const formEmail = form.children[3];
+// const formMessage = form.children[4];
+const formName = document.querySelector("#name");
+const formEmail = document.querySelector("#email");
+const formMessage = document.querySelector("#message");
 
+const formLabelName = document.querySelector("#label-name");
+const formLabelEmail = document.querySelector("#label-email");
+const formLabelMessage = document.querySelector("#label-message");
+
+
+// ? Botones de Idioma
 lanSpanish.addEventListener("click", function () {
   if (!lanSpanish.classList.contains("language-activated")) {
     cargarTraducciones("es");
@@ -97,15 +106,37 @@ if (systemLanguage.startsWith("es")) {
 
 // ? Cambio de idiomas para el formulario
 function formInputsSpanish() {
-  formName.setAttribute.apply(formName, ["placeholder", "Nombre"]);
-  formEmail.setAttribute.apply(formEmail, ["placeholder", "Correo"]);
-  formMessage.setAttribute.apply(formMessage, ["placeholder", "Mensaje"]);
+  formMessage.setAttribute.apply(formMessage, ["placeholder", "Mi mensaje"]);
+
+  formLabelEmail.textContent = "Correo";
+  formLabelName.textContent = "Nombre";
+  formLabelMessage.textContent = "Mensaje";
 }
 function formInputsEnglish() {
-  formName.setAttribute.apply(formName, ["placeholder", "Name"]);
-  formEmail.setAttribute.apply(formEmail, ["placeholder", "Email"]);
-  formMessage.setAttribute.apply(formMessage, ["placeholder", "Message"]);
+  formMessage.setAttribute.apply(formMessage, ["placeholder", "My message"]);
+
+  formLabelEmail.textContent = "Email";
+  formLabelName.textContent = "Name";
+  formLabelMessage.textContent = "Message";
 }
+
+
+// ? Animacion del Mensaje de alerta personalizado
+const alertMessage = document.querySelector(".alert-message");
+const alertMessageSpan = document.querySelector(".alert-message span");
+const alertMessageImg = document.querySelector(".alert-message img");
+
+function alertMessageShow(msg, icon) {
+  alertMessageSpan.textContent = msg;
+  alertMessageImg.src = "./img/icons/" + icon + ".svg";
+  alertMessage.classList.add("alert-message-active");
+};
+
+function alertMessageHide() {
+  alertMessageSpan.textContent = "[Este es un mensaje de alerta]";
+  alertMessageImg.src = "./img/icons/info-circle.svg";
+  alertMessage.classList.remove("alert-message-active");
+};
 
 // ? Evento de envio de mensaje del formulario al correo electronico
 // mediante el servicio de EmailJS
@@ -113,7 +144,20 @@ function formInputsEnglish() {
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
-  await sendMessage(formEmail.value, formName.value, formMessage.value);
+  await sendMessage(formEmail.value, formName.value, formMessage.value).then(() => {
+    console.log("Mensaje enviado exitosamente!");
+    alertMessageShow("Mensaje enviado exitosamente!", "success-alert");
+    setTimeout(() => {
+      alertMessageHide();
+    }, 3000);
+  }
+  ).catch((error) => {
+    console.log(`Fallo el envio del mensaje: ${error}`);
+    alertMessageShow("Fallo el envio del mensaje", "fail-alert");
+    setTimeout(() => {
+      alertMessageHide();
+    }, 3000);
+  });
 });
 
 // * Animacción de Proyectos y Aplicaciones

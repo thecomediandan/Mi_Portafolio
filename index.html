@@ -111,6 +111,7 @@
             </div>
         </div>
 
+        <!-- PREFERENCIAS -->
         <!-- ? BOTON DE HOME -->
         <div class="button-home-main">
             <button>
@@ -699,21 +700,29 @@
         </section>
 
         <!-- CONTACTAME/CONNECT WITH ME -->
-        <!-- //* Usamos la pagina de redireccion de correos FormSubmit -->
+        <!-- //* Usamos la pagina de redireccion de correos EmailJS -->
+        <!-- // Usamos la pagina de redireccion de correos FormSubmit -->
         <section id="main-contact">
             <h2 data-traduction="h2-connect-with-me">CONNECT WITH ME</h2>
             <div class="contact-form">
                 <!-- <form action="https://formsubmit.co/c59d4884fe684756fd08d7768fa2c312" method="POST"> -->
-                <form> 
-                    <h3><span data-traduction="span-send-me-a-message">SEND ME A MESSAGE</span></h3>
-                    <hr class="hr-separator-title-content">
-                    <input type="hidden" name="subject" value="Posible cliente del portafolio web">
-                    <!-- <label for="name">Nombre</label> -->
-                    <input type="text" name="name" id="name" placeholder="Name" required>
-                    <!-- <label for="email">Email</label> -->
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <!-- <label for="message">Mensaje</label> -->
-                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                <form>
+                    <div class="title-form">
+                        <h3><span data-traduction="span-send-me-a-message">SEND ME A MESSAGE</span></h3>
+                        <hr class="hr-separator-title-content">
+                    </div>
+                    <div class="text-form-field">
+                        <label for="name" class="label-form" id="label-name">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="text-form-field">
+                        <label for="email" class="label-form" id="label-email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="text-form-field">
+                        <label for="message" class="label-form" id="label-message">Mensaje</label>
+                        <textarea name="message" id="message" placeholder="My message" required></textarea>
+                    </div>
                     <button type="submit" class="button-interaction glow-on-hover">
                       <i class="fa-solid fa-paper-plane"></i>
                       <span data-traduction="span-send">ENVIAR</span>
@@ -723,6 +732,12 @@
             </div>
         </section>
     </main>
+
+    <!-- PREFERENCIAS -->
+    <div class="alert-message">
+      <img src="./img/icons/info-circle.svg" alt="Información">
+      <span>[Este es un mensaje de alerta]</span>
+    </div>
 
     <footer>
         <section id="main-footer">
