@@ -802,12 +802,22 @@ section {
   position: relative;
   z-index: 20;
 }
+/* Para imagenes de aplicaciones moviles */
 .project-list-model-with-image > img {
   position: absolute;
-  left: calc((25rem / 2) - (25rem / 4));
+  left: calc(25rem / 4);
   z-index: 19;
   height: 25rem;
   width: calc(25rem / 2);
+  border-radius: 1rem;
+}
+/* Para imagenes de aplicaciones web */
+.project-list-model-with-image.desktop > img {
+  position: absolute;
+  left: 0;
+  z-index: 19;
+  height: 25rem;
+  width: 25rem;
   border-radius: 1rem;
 }
 /* .project-list-model:hover {
@@ -949,8 +959,6 @@ img {
   );
   padding: 0.5rem 1rem 0.5rem 1rem;
   width: 100%;
-  /* margin-bottom: 2rem;
-  margin-top: 1.5rem; */
   outline-style: none;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -971,8 +979,6 @@ img {
     transparent
   );
   padding: 0.5rem 1rem 0.5rem 1rem;
-  /* margin-bottom: 2rem;
-  margin-top: 1rem; */
   outline-style: none;
   overflow-y: auto;
   width: 100%;
@@ -1135,6 +1141,17 @@ footer {
   .div-setux--buttom-language.nav--bar-button-option {
     display: none;
   }
+  .project-list-model-with-image > img {
+    left: calc(25rem / 4);
+    height: 25rem;
+    width: calc(25rem / 2);
+  }
+  /* Para imagenes de aplicaciones web */
+  .project-list-model-with-image.desktop > img {
+    left: 0;
+    height: 25rem;
+    width: 25rem;
+  }
 }
 
 /* ? Para portátiles y escritorios pequeños */
@@ -1184,6 +1201,13 @@ footer {
     height: 30rem;
   }
   .project-list-model-with-image > img {
+    left: calc(30rem / 4);
+    height: 30rem;
+    width: calc(30rem / 2);
+  }
+  .project-list-model-with-image > img {
+    left: 0;
+    height: 30rem;
     width: 30rem;
   }
   .contact-form {
@@ -1398,6 +1422,16 @@ footer {
     width: 100%;
   }
   .project-list-model {
+    width: 20rem;
+    height: 20rem;
+  }
+  .project-list-model-with-image > img {
+    left: calc(20rem / 4);
+    height: 20rem;
+    width: calc(20rem / 2);
+  }
+  .project-list-model-with-image.desktop > img {
+    left: 0;
     width: 20rem;
     height: 20rem;
   }
