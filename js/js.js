@@ -147,16 +147,16 @@ form.addEventListener("submit", async function (event) {
   await sendMessage(formEmail.value, formName.value, formMessage.value).then(() => {
     console.log("Mensaje enviado exitosamente!");
     alertMessageShow("Mensaje enviado exitosamente!", "success-alert");
-    setTimeout(() => {
-      alertMessageHide();
-    }, 3000);
-  }
-  ).catch((error) => {
+    formName.value = "";
+    formEmail.value = "";
+    formMessage.value = "";
+  }).catch((error) => {
     console.log(`Fallo el envio del mensaje: ${error}`);
     alertMessageShow("Fallo el envio del mensaje", "fail-alert");
+  }).finally(() => {
     setTimeout(() => {
       alertMessageHide();
-    }, 3000);
+    }, 5000);
   });
 });
 

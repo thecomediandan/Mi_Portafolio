@@ -1082,15 +1082,21 @@ footer {
 }
 .alert-message.alert-message-active {
   display: grid;
-  animation: alert-message 1s ease-in-out;
+  animation: alert-message 5s ease-in-out;
 }
 
 @keyframes alert-message {
   0% {
     opacity: 0;
   }
-  100% {
+  30% {
     opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
