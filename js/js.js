@@ -1,4 +1,5 @@
 import sendMessage from "./sendMessage.js";
+import validateEntryForm from "./validateEntryForm.js";
 
 // Animacion de los botones de EN | ES
 const lanSpanish = document.querySelector(
@@ -20,6 +21,8 @@ const formMessage = document.querySelector("#message");
 const formLabelName = document.querySelector("#label-name");
 const formLabelEmail = document.querySelector("#label-email");
 const formLabelMessage = document.querySelector("#label-message");
+
+const formButtonSubmit = document.querySelector(".contact-form form button");
 
 
 // ? Botones de Idioma
@@ -149,13 +152,13 @@ form.addEventListener("submit", async function (event) {
   loadingSendEmail.classList.add("active");
   labelButtonSendEmail.classList.remove("active");
   event.preventDefault();
-  if (
-    formEmail.value === "" ||
-    formName.value === "" ||
-    formMessage.value === ""
-  ) {
-    console.log("Campos del fomulario vacios!");
+  formButtonSubmit.setAttribute("disabled", "");
+  if (!validateEntryForm(formName.value, formEmail.value, formMessage.value)) {
+    console.log("Campos del fomulario vacios o incorrectos!");
     alertMessageShow("Campos del fomulario vacios", "info-circle");
+    loadingSendEmail.classList.remove("active");
+    labelButtonSendEmail.classList.add("active");
+    formButtonSubmit.removeAttribute("disabled");
     setTimeout(() => {
       alertMessageHide();
     }, 5000);
@@ -170,17 +173,43 @@ form.addEventListener("submit", async function (event) {
       })
       .catch((error) => {
         console.log(`Fallo el envio del mensaje: ${error}`);
-        alertMessageShow("Fallo el envio del mensaje", "fail-alert");
+        alertMessageShow("Falló el envio del mensaje", "fail-alert");
       })
       .finally(() => {
         loadingSendEmail.classList.remove("active");
         labelButtonSendEmail.classList.add("active");
+        formButtonSubmit.removeAttribute("disabled");
         setTimeout(() => {
           alertMessageHide();
         }, 5000);
       });
   }
 });
+
+// Logica de reactivado del boton pasado 59 segundos
+// document.addEventListener("DOMContentLoaded", function () {
+//     const button = document.getElementById("miBoton");
+//     const storedTime = localStorage.getItem("buttonTimestamp");
+
+//     if (storedTime) {
+//         const elapsedTime = Math.floor((Date.now() - storedTime) / 1000);
+//         if (elapsedTime < 59) {
+//             button.disabled = true;
+//             setTimeout(() => {
+//                 button.disabled = false;
+//             }, (59 - elapsedTime) * 1000);
+//         }
+//     }
+
+//     button.addEventListener("click", function () {
+//         button.disabled = true;
+//         localStorage.setItem("buttonTimestamp", Date.now());
+        
+//         setTimeout(() => {
+//             button.disabled = false;
+//         }, 59000);
+//     });
+// });
 
 // * Animacción de Proyectos y Aplicaciones
 const aplicaciones = document.querySelectorAll(
