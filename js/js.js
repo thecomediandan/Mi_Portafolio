@@ -121,10 +121,13 @@ function formInputsEnglish() {
 }
 
 
-// ? Animacion del Mensaje de alerta personalizado
+// ? Animacion del Mensaje de alerta personalizado para el envio del correo
 const alertMessage = document.querySelector(".alert-message");
 const alertMessageSpan = document.querySelector(".alert-message span");
 const alertMessageImg = document.querySelector(".alert-message img");
+
+const loadingSendEmail = document.querySelector(".loading-send-email");
+const labelButtonSendEmail = document.querySelector(".label-button-send-email");
 
 function alertMessageShow(msg, icon) {
   alertMessageSpan.textContent = msg;
@@ -143,21 +146,40 @@ function alertMessageHide() {
 // const buttonSubmitForm = document.querySelector("form > button[type='submit']");
 
 form.addEventListener("submit", async function (event) {
+  loadingSendEmail.classList.add("active");
+  labelButtonSendEmail.classList.remove("active");
   event.preventDefault();
-  await sendMessage(formEmail.value, formName.value, formMessage.value).then(() => {
-    console.log("Mensaje enviado exitosamente!");
-    alertMessageShow("Mensaje enviado exitosamente!", "success-alert");
-    formName.value = "";
-    formEmail.value = "";
-    formMessage.value = "";
-  }).catch((error) => {
-    console.log(`Fallo el envio del mensaje: ${error}`);
-    alertMessageShow("Fallo el envio del mensaje", "fail-alert");
-  }).finally(() => {
+  if (
+    formEmail.value === "" ||
+    formName.value === "" ||
+    formMessage.value === ""
+  ) {
+    console.log("Campos del fomulario vacios!");
+    alertMessageShow("Campos del fomulario vacios", "info-circle");
     setTimeout(() => {
       alertMessageHide();
     }, 5000);
-  });
+  } else {
+    await sendMessage(formEmail.value, formName.value, formMessage.value)
+      .then(() => {
+        console.log("Mensaje enviado exitosamente!");
+        alertMessageShow("Mensaje enviado exitosamente!", "success-alert");
+        formName.value = "";
+        formEmail.value = "";
+        formMessage.value = "";
+      })
+      .catch((error) => {
+        console.log(`Fallo el envio del mensaje: ${error}`);
+        alertMessageShow("Fallo el envio del mensaje", "fail-alert");
+      })
+      .finally(() => {
+        loadingSendEmail.classList.remove("active");
+        labelButtonSendEmail.classList.add("active");
+        setTimeout(() => {
+          alertMessageHide();
+        }, 5000);
+      });
+  }
 });
 
 // * Animacción de Proyectos y Aplicaciones

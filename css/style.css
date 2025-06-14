@@ -997,6 +997,21 @@ img {
   border-radius: 0.5rem;
   background-color: var(--color-dark-secundary1);
 }
+.contact-form form button .label-button-send-email.active {
+  display: block;
+}
+.contact-form form button .label-button-send-email {
+  display: none;
+}
+.contact-form form button .loading-send-email.active {
+  display: block;
+  filter: invert();
+  width: 2rem;
+  margin: auto;
+}
+.contact-form form button .loading-send-email {
+  display: none;
+}
 .contact-form img {
   width: 30%;
   object-fit: contain;
