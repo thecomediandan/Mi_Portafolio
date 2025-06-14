@@ -24,6 +24,11 @@ const formLabelMessage = document.querySelector("#label-message");
 
 const formButtonSubmit = document.querySelector(".contact-form form button");
 
+const formNotifySendEmail = document.querySelector(".notify-send-email");
+const formNotifyTimeElapsed = document.querySelector(".notify-time-elapsed");
+
+const TIME_INTERVAL_SEND_MESSAGE = 59000;
+
 
 // ? Botones de Idioma
 lanSpanish.addEventListener("click", function () {
@@ -163,6 +168,7 @@ form.addEventListener("submit", async function (event) {
       alertMessageHide();
     }, 5000);
   } else {
+    disableButtomSubmit(Math.floor(TIME_INTERVAL_SEND_MESSAGE / 1000));
     await sendMessage(formEmail.value, formName.value, formMessage.value)
       .then(() => {
         console.log("Mensaje enviado exitosamente!");
@@ -178,7 +184,7 @@ form.addEventListener("submit", async function (event) {
       .finally(() => {
         loadingSendEmail.classList.remove("active");
         labelButtonSendEmail.classList.add("active");
-        formButtonSubmit.removeAttribute("disabled");
+        //formButtonSubmit.removeAttribute("disabled");
         setTimeout(() => {
           alertMessageHide();
         }, 5000);
@@ -187,29 +193,35 @@ form.addEventListener("submit", async function (event) {
 });
 
 // Logica de reactivado del boton pasado 59 segundos
-// document.addEventListener("DOMContentLoaded", function () {
-//     const button = document.getElementById("miBoton");
-//     const storedTime = localStorage.getItem("buttonTimestamp");
 
-//     if (storedTime) {
-//         const elapsedTime = Math.floor((Date.now() - storedTime) / 1000);
-//         if (elapsedTime < 59) {
-//             button.disabled = true;
-//             setTimeout(() => {
-//                 button.disabled = false;
-//             }, (59 - elapsedTime) * 1000);
-//         }
-//     }
+function disableButtomSubmit(interval) {
+  var timeElapsed = interval
+  localStorage.setItem("buttonTimestamp", Date.now());
+  formButtonSubmit.disabled = true
+  formNotifySendEmail.classList.add("active");
+  var timer = setInterval(() => {
+      console.log(`Pasaron ${timeElapsed} segundo(s)`);
+      formNotifyTimeElapsed.textContent = timeElapsed;
+      timeElapsed--;
+      if (timeElapsed === 0) {
+        clearInterval(timer);
+        localStorage.setItem("buttonTimestamp", null);
+        formButtonSubmit.disabled = false
+        formNotifySendEmail.classList.remove("active");
+      }
+    }, 1000);
+}
 
-//     button.addEventListener("click", function () {
-//         button.disabled = true;
-//         localStorage.setItem("buttonTimestamp", Date.now());
-        
-//         setTimeout(() => {
-//             button.disabled = false;
-//         }, 59000);
-//     });
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    const storedTime = localStorage.getItem("buttonTimestamp");
+
+    if (storedTime) {
+        const elapsedTime = Math.floor((Date.now() - storedTime) / 1000);
+        if (elapsedTime < TIME_INTERVAL_SEND_MESSAGE) {
+            disableButtomSubmit(elapsedTime)
+        }
+    }
+});
 
 // * Animacción de Proyectos y Aplicaciones
 const aplicaciones = document.querySelectorAll(

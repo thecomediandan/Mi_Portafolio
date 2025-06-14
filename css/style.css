@@ -1016,6 +1016,12 @@ img {
   width: 30%;
   object-fit: contain;
 }
+.notify-send-email {
+  display: none;
+}
+.notify-send-email.active {
+  display: block;
+}
 
 footer {
   margin-top: 4rem;

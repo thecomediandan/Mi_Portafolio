@@ -20,6 +20,8 @@
     "h2-connect-with-me": "CONNECT WITH ME",
     "span-send-me-a-message": "SEND ME A MESSAGE",
     "span-send": "SEND",
+    "span-notify-send-email-1": "You can send messages in ",
+    "span-notify-send-email-2": " second(s).",
     "h3-languages-programation": "Programming languages",
     "h3-tool-tech": "Tools and technologies",
     "h3-inf-contact": "Contact infomation",
