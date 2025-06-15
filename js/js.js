@@ -160,7 +160,7 @@ form.addEventListener("submit", async function (event) {
   formButtonSubmit.setAttribute("disabled", "");
   if (!validateEntryForm(formName.value, formEmail.value, formMessage.value)) {
     console.log("Campos del fomulario vacios o incorrectos!");
-    alertMessageShow("Campos del fomulario vacios", "info-circle");
+    alertMessageShow("Campos del fomulario vacios o incorrectos", "info-circle");
     loadingSendEmail.classList.remove("active");
     labelButtonSendEmail.classList.add("active");
     formButtonSubmit.removeAttribute("disabled");

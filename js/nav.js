@@ -198,7 +198,7 @@ buttonOptionResponsive.addEventListener("click", (e) => {
 // ? AUTOMATIC THEME CONFIGURATION
 function funDarkMode() {
     const root = document.documentElement;
-    const logo = document.querySelector(".nav-logo > img");
+    const logo = document.querySelector(".nav-logo a img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
 
@@ -213,7 +213,7 @@ function funDarkMode() {
 }
 function funLightMode() {
     const root = document.documentElement;
-    const logo = document.querySelector(".nav-logo > img");
+    const logo = document.querySelector(".nav-logo a img");
     const footerLogo = document.querySelector(".footer-logo > img");
     const banner = document.querySelector(".paragraph");
 

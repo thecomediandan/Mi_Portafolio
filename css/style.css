@@ -65,10 +65,11 @@ nav {
   font-size: 0.9rem;
   display: grid;
   width: 80%;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 1fr 7fr 1fr;
   justify-items: center;
   align-items: center;
   padding: 1rem;
+  font-size: 0.8rem;
   /* background-color: var(--color-dark-primary2); */
 }
 nav button {
@@ -82,7 +83,7 @@ section {
 .nav-logo {
   grid-column: 1 / 2;
 }
-.nav-logo img {
+.nav-logo a img {
   width: 10rem;
   user-select: none;
   cursor: pointer;
@@ -469,6 +470,12 @@ section {
   padding: 0 1rem 1rem 1rem;
   color: white;
 }
+.work-description p {
+  width: auto;
+  height: 7rem;
+  text-overflow: clip;
+  overflow-y: auto;
+}
 .work-description h4 {
   font-family: var(--font-subtitle);
   color: var(--color-primary1);
@@ -491,17 +498,20 @@ section {
 }
 .work-presentation-test img {
   position: absolute;
+  background-color: gray;
   right: 0;
   top: 0;
   width: 327px;
   height: 10rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
   z-index: 0;
   object-fit: cover;
-  filter: blur(0.1rem);
+  /* filter: blur(0.1rem); */
 }
-.work-presentation-test .work-title {
+.work-title {
   width: 100%;
-  height: 5rem;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,6 +519,8 @@ section {
   color: white;
   text-shadow: 0 0 0.5rem var(--color-secundary1);
   font-size: 1.5rem;
+  text-align: center;
+  z-index: 30;
 }
 .work-presentation-test .work-info {
   display: flex;
@@ -581,7 +593,7 @@ section {
   padding: 0 1rem 1rem 1rem;
   justify-content: center;
 }
-.technologies-applicated svg {
+.technologies-applicated img {
   width: 2rem;
   margin: 0.2rem;
 }
@@ -874,10 +886,11 @@ img {
   flex-wrap: nowrap;
   align-items: center;
 }
-.project-list-model--top-buttons button {
-  width: 2rem;
+.project-list-model--top-buttons a {
+  width: 1.8rem;
+  z-index: 30;
 }
-.project-list-model--top-buttons button:first-child {
+.project-list-model--top-buttons a:first-child {
   margin: 0.5rem;
 }
 
@@ -902,10 +915,10 @@ img {
   background-color: rgba(39, 38, 43, 50%);
   border-radius: 0 0 1rem 1rem;
 }
-.project-list-model--tech-buttons button {
+.project-list-model--tech-buttons img {
   width: 2rem;
 }
-.project-list-model--tech-buttons button:nth-child(2) {
+.project-list-model--tech-buttons img:nth-child(2) {
   margin: 0.5rem;
 }
 
@@ -1135,9 +1148,9 @@ footer {
 .alert-message span {
   text-align: center;
   font-weight: bold;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  /* text-overflow: ellipsis;
+  overflow: hidden; */
+  /* white-space: nowrap; */
 }
 
 /*
@@ -1250,7 +1263,7 @@ footer {
   .nav-logo {
     grid-column: 1 / 2;
   }
-  .nav-logo img {
+  .nav-logo a img {
     width: 25%;
   }
   .nav-options {
@@ -1340,7 +1353,7 @@ footer {
   .nav-logo {
     grid-column: 1 / 2;
   }
-  .nav-logo img {
+  .nav-logo a img {
     width: 45%;
   }
   .nav-options {
