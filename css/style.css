@@ -246,6 +246,7 @@ section {
 }
 .nav--bar-button-close {
   grid-column: 2 / 3;
+  cursor: pointer;
 }
 .nav-bar-option--logo {
   display: flex;
