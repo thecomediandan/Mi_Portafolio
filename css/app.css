@@ -70,6 +70,8 @@ a {
 p a {
   display: inline;
   overflow-wrap: break-word;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 /* Quitamos los puntos de los <li> */
@@ -88,6 +90,9 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  hyphens: none;
   color: inherit;
 }
 
@@ -113,7 +118,7 @@ form, input, textarea, select, button, label {
   font-size: inherit;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
+          hyphens: none;
   background-color: transparent;
   color: inherit;
   display: block;
@@ -152,7 +157,7 @@ body {
   /* opcional */
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
+          hyphens: none;
   /* opcional */
   font-smooth: always;
   /* opcional */
