@@ -209,7 +209,7 @@ function funDarkMode() {
     root.style.setProperty('--color-accent', 'var(--accent-dark)');
     logo.setAttribute("src", "./img/logo/Logotipo-dark.png");
     footerLogo.setAttribute("src", "./img/logo/Logotipo-dark.png");
-    banner.setAttribute("style", "background-image: url('./img/logo/Fondo-Darkv2.png');");
+    banner.setAttribute("style", "background-image: url('/img/logo/Fondo-Darkv2.png');");
 }
 function funLightMode() {
     const root = document.documentElement;
@@ -224,7 +224,7 @@ function funLightMode() {
     root.style.setProperty('--color-accent', 'var(--accent-light)');
     logo.setAttribute("src", "./img/logo/Logotipo-light.png");
     footerLogo.setAttribute("src", "./img/logo/Logotipo-light.png");
-    banner.setAttribute("style", "background-image: url('./img/logo/Fondo-Lightv2.png');");
+    banner.setAttribute("style", "background-image: url('/img/logo/Fondo-Lightv2.png');");
 }
 
 var AutoModeThemeDark;
