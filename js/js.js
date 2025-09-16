@@ -52,7 +52,7 @@ lanEnglish.addEventListener("click", function () {
 // Carga del archivo traducciones
 function cargarTraducciones(idioma) {
   // Utilizando Fetch
-  fetch("/content/config/" + idioma + ".json")
+  fetch("./../content/config/" + idioma + ".json")
     .then(function (response) {
       response.json().then(function (traducciones) {
         console.log(traducciones);
