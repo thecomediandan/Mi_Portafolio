@@ -41,6 +41,17 @@
     "p-description-3": "Como persona fuera del entorno profesional, una persona sociable y de alta comunicación.",
     "span-download-cv": "DESCARGA MI CV",
     "h2-own-projects": "MIS PROYECTOS Y APLICACIONES",
+
+    "p-project-title-2": "Gráfico Psicrométrico",
+    "p-project-title-3": "Apuntes de Git",
+    "p-project-title-4": "Apuntes de desarrollo Web",
+    "p-project-title-5": "Calculadora",
+    "p-project-description-1": "Aplicación móvil para el control de turnos de jornadas de trabajo de los socios.",
+    "p-project-description-2": "Aplicación móvil para calcular gráficos psicrométricos.",
+    "p-project-description-3": "Una página web diseñada para ayudar a desarrolladores principiantes a comprender y utilizar Git de manera efectiva.",
+    "p-project-description-4": "Una página web diseñada para ayudar a desarrolladores a aprender desarrollo web desde cero.",
+    "p-project-description-5": "Una calculadora que prioriza la aritmética con el uso de agrupaciones mediante los paréntesis.",
+
     "h2-connect-with-me": "CONECTA CONMIGO",
     "span-send-me-a-message": "ENVÍAME UN MENSAJE",
     "span-send": "ENVIAR",

@@ -41,6 +41,17 @@
     "p-description-3": "As a person outside of the professional environment, I am sociable and highly communicative.",
     "span-download-cv": "DOWNLOAD CV",
     "h2-own-projects": "PROJECTS AND APLICATIONS",
+
+    "p-project-title-2": "Psycrometric Charts",
+    "p-project-title-3": "Git Notes",
+    "p-project-title-4": "Web Development Notes",
+    "p-project-title-5": "Calculator",
+    "p-project-description-1": "Mobile app designed to organize and track work shifts among business associates.",
+    "p-project-description-2": "Mobile application for calculating psychrometric charts.",
+    "p-project-description-3": "A website designed to help beginner developers understand and use Git effectively.",
+    "p-project-description-4": "A website designed to help developers learn web development from scratch.",
+    "p-project-description-5": "A calculator that prioritizes arithmetic operations using grouping through parentheses.",
+
     "h2-connect-with-me": "CONNECT WITH ME",
     "span-send-me-a-message": "SEND ME A MESSAGE",
     "span-send": "SEND",
