@@ -37,7 +37,7 @@
 
     "p-who-am-i": "¿QUIÉN SOY YO?",
     "p-description-1": "Un apasionado desarrollador de software versátil y dispuesto afrontar distintas tecnologías cuando así se lo requiera.",
-    "p-description-2": "Programador en sistemas a nivel técnico superior, futuro ingeniero en sistemas de la carrera de Informática en la Universidad Mayor de San Andrés de la ciudad de La Paz en Bolivia.",
+    "p-description-2": "Programador en sistemas a nivel técnico superior de la ciudad de La Paz en Bolivia.",
     "p-description-3": "Como persona fuera del entorno profesional, una persona sociable y de alta comunicación.",
     "span-download-cv": "DESCARGA MI CV",
     "h2-own-projects": "MIS PROYECTOS Y APLICACIONES",
@@ -51,6 +51,7 @@
     "p-project-description-3": "Una página web diseñada para ayudar a desarrolladores principiantes a comprender y utilizar Git de manera efectiva.",
     "p-project-description-4": "Una página web diseñada para ayudar a desarrolladores a aprender desarrollo web desde cero.",
     "p-project-description-5": "Una calculadora que prioriza la aritmética con el uso de agrupaciones mediante los paréntesis.",
+    "p-project-description-6": "Una aplicación de escritorio que permite convertir monedas utilizando tasas de cambio en tiempo real.",
 
     "h2-connect-with-me": "CONECTA CONMIGO",
     "span-send-me-a-message": "ENVÍAME UN MENSAJE",

@@ -37,7 +37,7 @@
 
     "p-who-am-i": "WHO AM I?",
     "p-description-1": "A passionate and versatile software developer, ready to tackle different technologies as needed.",
-    "p-description-2": "Systems programmer with a higher technical degree, future systems engineer pursuing a degree in Computer Science at the Universidad Mayor de San Andrés in La Paz, Bolivia.",
+    "p-description-2": "Systems programmer with an advanced technical degree from La Paz, Bolivia.",
     "p-description-3": "As a person outside of the professional environment, I am sociable and highly communicative.",
     "span-download-cv": "DOWNLOAD CV",
     "h2-own-projects": "PROJECTS AND APLICATIONS",
@@ -51,6 +51,7 @@
     "p-project-description-3": "A website designed to help beginner developers understand and use Git effectively.",
     "p-project-description-4": "A website designed to help developers learn web development from scratch.",
     "p-project-description-5": "A calculator that prioritizes arithmetic operations using grouping through parentheses.",
+    "p-project-description-6": "A desktop application that allows currency conversion using real-time exchange rates.",
 
     "h2-connect-with-me": "CONNECT WITH ME",
     "span-send-me-a-message": "SEND ME A MESSAGE",
