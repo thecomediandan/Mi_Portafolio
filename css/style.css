@@ -850,23 +850,23 @@ section {
   flex-direction: column;
 }
 /* Para imagenes de aplicaciones moviles */
-.project-list-model-with-image > img {
-  /* position: absolute; */
-  /* left: calc(25rem / 4); */
-  /* z-index: 19; */
+/* .project-list-model-with-image > img {
+  position: absolute;
+  left: calc(25rem / 4);
+  z-index: 19;
   height: 25rem;
   width: calc(25rem / 2);
   border-radius: 1rem;
-}
+} */
 /* Para imagenes de aplicaciones web */
-.project-list-model-with-image.desktop > img {
-  /* position: absolute;
-  left: 0; */
-  /* z-index: 19; */
+/* .project-list-model-with-image.desktop > img {
+  position: absolute;
+  left: 0;
+  z-index: 19;
   height: 25rem;
   width: 25rem;
   border-radius: 1rem;
-}
+} */
 /* .project-list-model:hover {
     box-shadow: 0 0 1.5rem 0.5rem var(--color-primary1);
 } */
@@ -1256,16 +1256,19 @@ footer {
   .div-setux--buttom-language.nav--bar-button-option {
     display: none;
   }
-  .project-list-model-with-image > img {
+  /* .project-list-model-with-image > img {
     left: calc(25rem / 4);
     height: 25rem;
     width: calc(25rem / 2);
-  }
+  } */
   /* Para imagenes de aplicaciones web */
-  .project-list-model-with-image.desktop > img {
+  /* .project-list-model-with-image.desktop > img {
     left: 0;
     height: 25rem;
     width: 25rem;
+  } */
+  .project-list-model--tech-buttons a {
+    font-size: 1.1rem;
   }
 }
 
@@ -1313,9 +1316,8 @@ footer {
   }
   .project-list-model {
     width: 30rem;
-    height: 30rem;
   }
-  .project-list-model-with-image > img {
+  /* .project-list-model-with-image > img {
     left: calc(30rem / 4);
     height: 30rem;
     width: calc(30rem / 2);
@@ -1324,6 +1326,9 @@ footer {
     left: 0;
     height: 30rem;
     width: 30rem;
+  } */
+  .project-list-model--tech-buttons a {
+    font-size: 1.1rem;
   }
   .contact-form {
     width: 100%;
@@ -1538,9 +1543,8 @@ footer {
   }
   .project-list-model {
     width: 20rem;
-    height: 20rem;
   }
-  .project-list-model-with-image > img {
+  /* .project-list-model-with-image > img {
     left: calc(20rem / 4);
     height: 20rem;
     width: calc(20rem / 2);
@@ -1549,6 +1553,9 @@ footer {
     left: 0;
     width: 20rem;
     height: 20rem;
+  } */
+  .project-list-model--tech-buttons a {
+    font-size: 1rem;
   }
   .contact-form {
     width: 100%;
