@@ -35,7 +35,7 @@ lanSpanish.addEventListener("click", function () {
   if (!lanSpanish.classList.contains("language-activated")) {
     cargarTraducciones("es");
     lanSpanish.classList.add("language-activated");
-    lanEnglish.classList.toggle("language-activated");
+    lanEnglish.classList.remove("language-activated");
     formInputsSpanish();
   }
 });
@@ -44,7 +44,7 @@ lanEnglish.addEventListener("click", function () {
   if (!lanEnglish.classList.contains("language-activated")) {
     cargarTraducciones("en");
     lanEnglish.classList.add("language-activated");
-    lanSpanish.classList.toggle("language-activated");
+    lanSpanish.classList.remove("language-activated");
     formInputsEnglish();
   }
 });
@@ -103,12 +103,12 @@ console.log(systemLanguage);
 if (systemLanguage.startsWith("es")) {
   cargarTraducciones("es");
   lanSpanish.classList.add("language-activated");
-  lanEnglish.classList.toggle("language-activated");
+  lanEnglish.classList.remove("language-activated");
   formInputsSpanish();
 } else {
   cargarTraducciones("en");
   lanEnglish.classList.add("language-activated");
-  lanSpanish.classList.toggle("language-activated");
+  lanSpanish.classList.remove("language-activated");
   formInputsEnglish();
 }
 
