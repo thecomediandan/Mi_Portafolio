@@ -248,14 +248,17 @@ const buttonBackToHome = document.querySelector(".button-home-main");
 
 // Capturando movimiento del scroll
 window.addEventListener("scroll", () => {
-  console.log("Este es el evento Scroll");
   let position = window.scrollY;
   // Altura maxima de la ventana del navegador de la parte interna (contenido)
   let maxInnerHeight = window.innerHeight;
-  // console.log("La altura maxima es: " + maxHeight);
+  
   if (position > maxInnerHeight / 2) {
-    buttonBackToHome.setAttribute("style", "display: block");
+    if (buttonBackToHome.style.display !== "block") {
+      buttonBackToHome.style.display = "block";
+    }
   } else {
-    buttonBackToHome.setAttribute("style", "display: none");
+    if (buttonBackToHome.style.display !== "none") {
+      buttonBackToHome.style.display = "none";
+    }
   }
 });
