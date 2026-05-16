@@ -227,20 +227,19 @@ document.addEventListener("DOMContentLoaded", function () {
 const aplicaciones = document.querySelectorAll(
   ".project-list-model-with-image",
 );
-// console.log(aplicaciones[0].children[1].children[1].children[0]);
 
 aplicaciones.forEach((aplicacion) => {
-  console.log(aplicacion.children[1].children[1].children[0]);
-  aplicacion.addEventListener("mouseover", (e) => {
-    aplicacion.children[1].children[1].children[0].classList.add(
-      "p-description-animation",
-    );
-  });
-  aplicacion.addEventListener("mouseout", (e) => {
-    aplicacion.children[1].children[1].children[0].classList.remove(
-      "p-description-animation",
-    );
-  });
+  // Encontramos el parrafo de forma segura en lugar de usar indices
+  const pDescription = aplicacion.querySelector(".project-list-model--description-tech p");
+  
+  if (pDescription) {
+    aplicacion.addEventListener("mouseover", (e) => {
+      pDescription.classList.add("p-description-animation");
+    });
+    aplicacion.addEventListener("mouseout", (e) => {
+      pDescription.classList.remove("p-description-animation");
+    });
+  }
 });
 
 // * Animacion para el boton backtohome
